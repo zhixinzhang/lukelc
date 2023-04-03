@@ -1,7 +1,6 @@
-CREATE DATABASE IF NOT EXISTS petclinic;
+CREATE DATABASE IF NOT EXISTS eticket;
+USE eticket;
 
-ALTER DATABASE petclinic
-  DEFAULT CHARACTER SET utf8
-  DEFAULT COLLATE utf8_general_ci;
-
-GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;

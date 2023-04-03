@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "leetcodes")
-public class LCEntity {
+public class LeetcodeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
