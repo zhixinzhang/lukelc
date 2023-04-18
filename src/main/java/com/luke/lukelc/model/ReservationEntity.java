@@ -17,7 +17,6 @@ public class ReservationEntity {
 	
 	@Column
 	private LocalDateTime dt;
-
 	
 	@Column(name="user_id")
 	private Long userId;

@@ -1,12 +1,33 @@
 # lukelc
+
+<li>Initial DB first</li>
+
+lukezhang@DESKTOP-7687KRD:~/projects/lukelc$ sudo service mysql start
+
+[sudo] password for lukezhang: LukeAi....1
+
+[root@host]# mysql -u root -p
+lukezhang@DESKTOP-7687KRD:~/projects/lukelc$ sudo mysql -p -u root
+
+mysql> use test;
+Database changed
+mysql> show tables;
+7 rows in set (0.00 sec)
+
+mysql> select * from flights;
+Empty set (0.00 sec)
+
+<li>Run LukelcApplication</li>
+
+
+
 <li>https://docs.spring.io/spring-boot/docs/current/reference/html/index.html</li>
-### Mysql Command 
+Mysql Command 
 
 *Start and Stop MySQL using*
 <li>https://www.youtube.com/watch?v=2paC-z79OeY</li>
 ```
-lukezhang@DESKTOP-7687KRD:~/projects/lukelc$ sudo service mysql start
-[sudo] password for lukezhang: LukeAi....1
+
 
 lukezhang@DESKTOP-7687KRD:~/projects/lukelc$ sudo mysqld_safe --skip-grant-tables &
 Please ENTER to return to the linux bash prompt
@@ -21,7 +42,7 @@ quit
 
 sudo service mysql stop
 
-lukezhang@DESKTOP-7687KRD:~/projects/lukelc$ sudo mysql -p -u root
+
 ```
 
 *enter into Mysql*
