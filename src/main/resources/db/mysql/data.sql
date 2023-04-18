@@ -37,3 +37,15 @@ INSERT IGNORE INTO  flights VALUES (6, 'LAX', 'JFK', '2022-11-3 10:20:00', '2022
 INSERT INTO orders (id, source, destination, departure, arrival, tickets_count, price, carrier)
   VALUES (1, 'BOS', 'LAX', '2022-10-01 16:00:00', '2022-10-01 21:05:00', 1, 210, 'Spirit');
 
+
+START TRANSACTION or BEGIN; --statement1
+UPDATE bankaccounts SET funds=funds-100 WHERE accountno='ACC1'; --statement2
+UPDATE bankaccounts SET funds=funds+100 WHERE accountno='ACC2'; --statement3
+COMMIT; --statement4
+
+
+START TRANSACTION; --statement1
+UPDATE bankaccounts SET funds=funds-100 WHERE accountno='ACC1'; --statement2
+UPDATE bankaccounts SET funds=funds+100 WHERE accountno='ACC2'; --statement3
+ROLLBACK; --statement4
+
